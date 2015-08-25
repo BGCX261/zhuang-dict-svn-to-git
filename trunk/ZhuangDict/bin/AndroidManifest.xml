@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="cn.wangdazhuang.zdict"
+      android:versionCode="2"
+      android:versionName="2.0">
+    <uses-sdk android:targetSdkVersion="4" android:minSdkVersion="4" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        		  <!-- 如果选择加载模式为singleInstance，则这时如果有用到TTS的话，在进行TTS检测时在onActivityResult中返回的结果会是TextToSpeech.Engine.CHECK_VOICE_DATA_FAIL；而其他模式则不会出现这种情况，具体原因还有待研究
+        		  android:launchMode="singleInstance"
+        		   -->
+        <activity android:name="cn.wangdazhuang.zdict.ZhuangDictActivity"
+        		  android:configChanges="orientation"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
